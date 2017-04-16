@@ -3,22 +3,23 @@ var app = express();
 var router = express.Router();
 var path = __dirname + '/src/';
 
+
 router.use(function (req,res,next) {
   console.log("/" + req.method);
   next();
 });
 
 router.get("/",function(req,res){
-  res.sendFile(path + "index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 /*
-router.get("/about",function(req,res){
-  res.sendFile(path + "about.html");
+router.get("/viewReceipt",function(req,res){
+  res.sendFile(path + "viewReceipt.html");
 });
 
-router.get("/contact",function(req,res){
-  res.sendFile(path + "contact.html");
+router.get("/editReceipt",function(req,res){
+  res.sendFile(path + "editReceipt.html");
 });
 */
 
